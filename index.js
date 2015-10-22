@@ -30,7 +30,7 @@ module.exports = function jadeConcat(fileName, _opts) {
 
   function end () {
     //wrap concatenated string in template object
-    var templateString = "import jade from 'jade-runtime'\nexport default " + _opts.templateVariable + " {\n" + concatString + "}";
+    var templateString = "import jade from 'jade-runtime'\nexport default {\n" + concatString + "}";
 
     this.queue(new gutil.File({
       path: fileName,
